@@ -16,4 +16,6 @@ RUN cd ~ && \
     yarn install && \
     NODE_ENV=production yarn build
 
-CMD cd /opt/thelounge && yarn start
+COPY ./start.sh /opt/
+
+CMD /opt/start.sh
